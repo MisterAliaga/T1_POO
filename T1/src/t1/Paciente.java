@@ -85,4 +85,8 @@ public class Paciente {
     public Paciente() {
         
     }
+    @Override
+    public String toString() {
+    return "ID: " + this.nmr_doc + " | Nombre: " + this.nombre_completo + " | Correo: " + this.correo;
+}
 }
