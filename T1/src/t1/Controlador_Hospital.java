@@ -18,5 +18,18 @@ public class Controlador_Hospital {
         listaPacientes.add(n_paciente);
         System.out.println("Paciente Registrado con exito");
     }
+    public Paciente buscarPorId(String dni) {
+        for (Paciente p : listaPacientes) {
+            if (p.getNmr_doc().equalsIgnoreCase(dni)) return p;
+        }
+        return null;
+    }
+    public void listarPacientes() {
+        if (listaPacientes.isEmpty()) {
+            System.out.println("No hay pacientes registrados.");
+            return;
+        }
+        for (Paciente p : listaPacientes) System.out.println(p);
+    }
 }
 
